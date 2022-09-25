@@ -1,0 +1,29 @@
+<%- include('partials/header') -%>
+<div class="container">
+  <div class="row mt-5">
+      <div class="col-6">
+           <div>
+              <h3>Welcome to your profile</h3>
+              <a href="/auth/logout" class="col-3 btn btn-primary">Logout</a>
+          </div> 
+          <div class="mt-5">
+            <h2>What do you throw away often?</h2>
+            <form action="/post/createWaste" enctype="multipart/form-data" method="POST">
+              <div class="mb-3">
+                  <label for="name" class="form-label">Item</label>
+                  <input type="text" class="form-control" id="name" name="name">
+              <button type="submit" class="btn btn-primary" value="Upload">Add</button>
+            </form>
+          </div>
+          <div class="mt-5">
+            <h2>What do you need often?</h2>
+            <form action="/post/createNeed" enctype="multipart/form-data" method="POST">
+              <div class="mb-3">
+                  <label for="name" class="form-label">Item</label>
+                  <input type="text" class="form-control" id="name" name="name">
+              <button type="submit" class="btn btn-primary" value="Upload">Add</button>
+            </form>
+          </div>
+      </div>
+    </div>
+  </div>
